@@ -7,9 +7,10 @@ ai_bp = Blueprint('ai', __name__)
 def chat():
     data = request.json
     user_message = data.get('message', '')
-    
+    mode = data.get('mode', 'chat')
+
     if not user_message:
         return jsonify({'error': 'Message is required'}), 400
-    
-    response = generate_response(user_message)
+
+    response = generate_response(user_message, mode)
     return jsonify({'response': response})

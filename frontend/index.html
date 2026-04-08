@@ -9,9 +9,15 @@
 <body>
     <div class="container">
         <h1>📚 StudyGenie</h1>
+        <div class="mode-buttons">
+            <button class="mode-btn active" data-mode="chat">💬 Chat</button>
+            <button class="mode-btn" data-mode="eli5">🧒 Explain Like I'm 5</button>
+            <button class="mode-btn" data-mode="mcq">🎯 Exam Mode (MCQs)</button>
+        </div>
         <div id="chat-container">
             <div id="messages"></div>
         </div>
+        <div id="stats"></div>
         <div class="input-area">
             <input type="text" id="user-input" placeholder="Ask me anything about your studies...">
             <button id="send-btn">Send</button>

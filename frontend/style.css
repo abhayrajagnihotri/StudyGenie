@@ -28,13 +28,36 @@ h1 {
     margin-bottom: 20px;
 }
 
+.mode-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.mode-btn {
+    padding: 8px 16px;
+    border: 2px solid #667eea;
+    border-radius: 20px;
+    background: white;
+    color: #667eea;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.mode-btn.active, .mode-btn:hover {
+    background: #667eea;
+    color: white;
+}
+
 #chat-container {
-    height: 400px;
+    height: 380px;
     overflow-y: auto;
     border: 2px solid #e0e0e0;
     border-radius: 10px;
     padding: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     background: #f9f9f9;
 }
 
@@ -43,6 +66,7 @@ h1 {
     padding: 10px 15px;
     border-radius: 10px;
     max-width: 80%;
+    white-space: pre-wrap;
 }
 
 .user-message {
@@ -55,6 +79,13 @@ h1 {
 .ai-message {
     background: #e0e0e0;
     color: #333;
+}
+
+#stats {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 10px;
+    text-align: right;
 }
 
 .input-area {
